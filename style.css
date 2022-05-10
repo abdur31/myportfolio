@@ -36,10 +36,7 @@ span,p{
 	font-size: 160px;
 	text-transform: uppercase;
 	line-height: 140px;
-	background: -o-linear-gradient(left, #A21AF0, #FF0072);
-	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
 	background: linear-gradient(to right, #A21AF0, #FF0072);
-	-webkit-background-clip: text !important;
 	background-clip: text !important;
 	color: transparent;
 }
@@ -50,7 +47,7 @@ span,p{
 	top: 62%;
 	width: 9rem;
 	height: 0.5rem;
-	background: #BC10C2;
+  background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 body .btn-primary{
 	font-size: 1.8rem;
@@ -64,6 +61,7 @@ body .btn-primary{
   background: linear-gradient(15deg, #A21AF0 50%, #FF0072 50%);
 	font-family: Ubuntu-Bold;
 	transition: .5s ease-in-out;
+	border-color: #FF0072;
 }
 body .btn-primary a{
 	letter-spacing: 0;
@@ -233,35 +231,20 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 	width: 40rem;
 	height: 50rem;
 	border-radius: 3rem 9rem;
-	box-shadow: 4px 11px 5px #00488C;
+	box-shadow: 4px 11px 5px #FF0072;
 }
 /*about section end*/
 /*work details section start*/
 .work-details{
 	padding: 5rem 0rem;
 }
-.headding-2{
-	padding: 5rem 0rem;
-}
-.headding-2 h2 {
-	font-size: 4rem;
-	position: relative;
-	color: #00488C;
-	margin-bottom: 3rem;
-}
-.headding-2 h2::after{
-	position: absolute;
-	content: '';
-	left: 45%;
-	top: 50%;
-	width: 7rem;
-	height: 0.7rem;
-	background: #BC10C2;
-}
-.work-details .work-details-content .work-details-content-items h2{
-  color: #BC10C2;
-  font-size: 3.7rem;
-  padding-bottom: 2.5rem;
+.work-details-content-items  h2 {
+	font-size: 3rem;
+	background-clip: text !important;
+	color: transparent;
+	background: linear-gradient(to right, #A21AF0, #FF0072);
+	padding: 2rem 0rem;
+	padding-bottom: 2.5rem;
 }
 .work-details .work-details-content .work-details-content-items h4{
 	font-size: 2rem;
@@ -274,11 +257,7 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 .work-details .work-qualiry{
    width: 24rem;
 	 height: 30rem;
-	 background: #5115CA;
-	background: -webkit-linear-gradient(top right, #5115CA, #BC10C2);
-	background: -moz-linear-gradient(top right, #5115CA, #BC10C2);
-	background: linear-gradient(to bottom left, #5115CA, #BC10C2);
-	 /*margin-bottom: 4rem;*/
+	 background: linear-gradient(to right, #A21AF0, #FF0072);
 	 border-radius: 2rem 7rem;
    margin-bottom: 4rem;
    position: relative;
@@ -302,15 +281,15 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 	width: 5rem;
 	height: 5rem;
 	line-height: 5rem;
-	background: #BC10C2;
+	background: #FF0072;
 	border-radius: 50%;
 	margin: 1.5rem 0rem;
 	color: #fff;
-		box-shadow: 0 0 3rem darkblue;
+		box-shadow: 0 0 3rem #A21AF0;
 	}
 .work-details .work-qualiry .work-items h3 {
 	font-size: 2.5rem;
-	box-shadow: 0 0 2rem #ddd;
+	box-shadow: 0 0 5rem #FF0072;
 	padding: 0.3rem 0rem;
 	margin: 0.6rem 0rem;
 }
@@ -326,7 +305,10 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 	padding-left: 0;
 }
 .work-headding h2{
-	color: #BC10C2;
+	background-clip: text !important;
+  color: transparent;
+  background: linear-gradient(to right, #A21AF0, #FF0072);
+  font-size: 3rem;
 }
 .work-logo .item ul li a img{
    	width: 10rem;

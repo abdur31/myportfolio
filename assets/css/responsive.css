@@ -33,8 +33,17 @@
 .header-banner .banner-content {
 	top: 40%;
 }
+.header-banner .banner-content h4{
+	font-size: 4rem;
+}
+.header-banner .banner-content h2{
+	font-size: 8rem;
+}
+.header-banner .banner-content h3{
+	font-size: 4rem;
+}
 .col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
-	padding-top: 4rem;
+	padding-top: 14rem;
 }
 .banner-image {
 	width: 36rem;
@@ -46,6 +55,15 @@
 body .btn-primary {
 	margin-top: 2rem;
 }
+.header-banner .banner-content h4{
+	font-size: 3.5rem;
+}
+.header-banner .banner-content h2{
+	font-size: 6rem;
+}
+.header-banner .banner-content h3{
+	font-size: 3.5rem;
+}
 .col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
 	padding-top: 4rem;
 }
@@ -53,7 +71,7 @@ body .btn-primary {
 	top: 27%;
 }
 .col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
-	padding-top: 2.5rem;
+	padding-top: 10rem;
 }
 .banner-image {
 	width: 35rem;
