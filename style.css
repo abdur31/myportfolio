@@ -289,7 +289,7 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 	}
 .work-details .work-qualiry .work-items h3 {
 	font-size: 2.5rem;
-	box-shadow: 0 0 5rem #FF0072;
+	box-shadow: 0 0 5rem #A21AF0;
 	padding: 0.3rem 0rem;
 	margin: 0.6rem 0rem;
 }
@@ -308,7 +308,7 @@ background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 	background-clip: text !important;
   color: transparent;
   background: linear-gradient(to right, #A21AF0, #FF0072);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .work-logo .item ul li a img{
    	width: 10rem;
