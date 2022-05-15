@@ -22,14 +22,41 @@ $( document ).ready(function() {
         }
     });
 });
-// portfolio section //
-$(document).ready(function(){
-  var mixer = mixitup('.js-add-costom');
-  var mixer = mixitup(containerEl, {
-    pagination: {
-        limit: 8 // impose a limit of 8 targets per page
-    }
+
+$( document ).ready(function() {
+    $('#brand-item-2').owlCarousel({
+        loop:true,
+        margin:50,
+         autoplay:true,
+        autoplayTimeout: 3000,
+        smartSpeed: 1500,
+        autoplayHoverPause:true,
+        dots:true,
+        responsive:{
+              0:{
+                items:1
+            },
+              480:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1000:{
+                items:3
+            },
+             1200:{
+                items:4
+            }
+        }
+    });
 });
-});
+
 
 
