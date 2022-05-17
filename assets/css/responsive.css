@@ -35,6 +35,22 @@
 }
 @media only screen and (max-width: 992px) {
 	/*header banner section*/
+	.header-banner .banner-content h2 {
+	font-size: 6rem;
+}
+.header-banner .banner-content h4{
+	font-size: 3rem;
+}
+.header-banner .banner-content h3{
+	font-size: 3rem;
+}
+.banner-image {
+	top: 9%;
+}
+.banner-image {
+	width: 35rem;
+	height: 35rem;
+}
 .col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.align-items-center {
 	z-index: 4;
 	text-align: center;
@@ -103,24 +119,21 @@ display: inline;
 }
 @media only screen and (max-width: 576px){
 /*header banner section*/
-.header-banner .banner-content {
-	top: 40%;
+	.header-banner .banner-content h2 {
+	font-size: 4.5rem;
 }
 .header-banner .banner-content h4{
-	font-size: 4rem;
-}
-.header-banner .banner-content h2{
-	font-size: 8rem;
+	font-size: 2.5rem;
 }
 .header-banner .banner-content h3{
-	font-size: 4rem;
-}
-.col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
-	padding-top: 14rem;
+	font-size: 2.5rem;
 }
 .banner-image {
-	width: 36rem;
-	height: 36rem;
+	top: 9%;
+}
+.banner-image {
+	width: 30rem;
+	height: 30rem;
 }
 .owl-carousel.owl-drag .owl-item {
 	display: flex;
@@ -129,30 +142,27 @@ display: inline;
 }
 @media only screen and (max-width: 480px){
 /*header banner section*/
-body .btn-primary {
-	margin-top: 2rem;
+	.header-banner .banner-content h2 {
+	font-size: 4rem;
 }
 .header-banner .banner-content h4{
-	font-size: 3.5rem;
-}
-.header-banner .banner-content h2{
-	font-size: 6rem;
+	font-size: 2rem;
 }
 .header-banner .banner-content h3{
-	font-size: 3.5rem;
+	font-size: 2rem;
 }
-.col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
-	padding-top: 4rem;
-}
-.header-banner .banner-content {
-	top: 27%;
-}
-.col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.justify-content-center {
-	padding-top: 10rem;
+.header-banner .banner-content p {
+	font-size: 1.5rem;
 }
 .banner-image {
-	width: 35rem;
-	height: 35rem;
+	top: 9%;
+}
+.banner-image {
+	width: 30rem;
+	height: 30rem;
+}
+body .btn-primary {
+	margin-top: 1.5rem;
 }
 .owl-carousel.owl-drag .owl-item {
 	display: flex;
