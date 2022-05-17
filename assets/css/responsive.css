@@ -78,6 +78,11 @@
 	padding-bottom: 3rem;
 }
 }
+@media only screen and (max-width: 991px){
+.btn.nav-btn{
+display: inline;	
+}
+}
 @media only screen and (max-width: 768px){
 .owl-carousel.owl-drag .owl-item {
 	display: flex;
