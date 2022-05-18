@@ -22,9 +22,14 @@ span,p{
 	padding: 1rem 1rem;
 }
 .navbar-nav.ms-auto li a{
-	color: #fff;
-	cursor: pointer;
-	font-size: 1.8rem;
+/*		background-clip: text !important;
+	color: transparent;
+	background: linear-gradient(to right, #A21AF0, #FF0072);*/
+	font-size: 2rem;
+	color: #FF0072;
+}
+.navbar-nav.ms-auto li a:hover{
+   	cursor: pointer;
 }
 .navbar-nav.ms-auto li a i {
 	padding: 0rem 0.6rem;
@@ -53,7 +58,7 @@ span,p{
   padding-top: 1.5rem;
 }
 .mobil-icon {
-	margin-left: 3.5rem;
+	margin-left: 3.3rem;
 }
 .mobil-icon i {
 	color: #fff;
@@ -78,7 +83,7 @@ margin-top: 6rem;
 }
 .mobil-manu-nav ul li a{
 font-size: 2rem;
-color: #fff;
+color: #FF0072;
 line-height: 1.9;
 }
 .mobil-manu-nav ul li a:hover{
@@ -92,9 +97,9 @@ line-height: 1.9;
 	background: #000;
 }
 .bg-color-1{
-	z-index: -1;
-	color: transparent;
-	background: linear-gradient(to right, #A21AF0, #FF0072);
+
+  background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+	
 }
 .btn.nav-btn {
 	cursor: pointer;
@@ -103,22 +108,25 @@ line-height: 1.9;
 	background: #FF0072;
 	height: 100vh;
 }
+.fa-solid.fa-bars::before {
+	color: #A21AF0;	
+}
 .fa-bars::before, .fa-navicon::before {
 	position: absolute;
-	right: 8rem;
-	font-size: 3rem;
-	color: #fff;
-	top: 1.3rem;
+	right: 4rem;
+	font-size: 3.3rem;
+	top: 3rem;
 }
 .btn-close.text-reset {
 	font-size: 2.5rem;
 	border: 1px solid #FF0072;
 	padding: 2rem;
 	border-radius: 1rem;
-	background: ;
 }
 .navbar-brand img {
-	width: 100px;
+	width: 10rem;
+	height: 8rem;
+	padding: 1rem;
 }
 .headding{
 	padding: 5rem 0rem;
@@ -550,9 +558,18 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 /*portfolio section start*/
 
 /*portfolio section end*/
+/*skill section start*/
+
+/*skill section end*/
 /*team section start*/
 .team-section.gray-bg.py-5 {
 	margin: 15rem 0rem;
+}
+.hedding-discription P {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: -3rem;
+	margin-bottom: 5rem;
 }
 .team-section .team-member .team-image {
 	position: relative;
@@ -570,7 +587,7 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 .team-section .team-member .member-profile-icon {
 	position: absolute;
 	right: 0;
-	left: 0;
+	left: 1.5rem;
 	bottom: -10rem;
 	margin: auto;
 }
@@ -714,6 +731,9 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
   border-radius: 1rem;
 } 
 .contact-form #text{
+	color: #FF0072;
+}
+.contact-form #text-1{
 	color: #FF0072;
 }
 .contact-form form label{
