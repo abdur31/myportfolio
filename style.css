@@ -135,8 +135,8 @@ line-height: 1.9;
 	cursor: pointer;
 	display: none;
 	float: right;
-	background: #FF0072;
-	height: 100vh;
+	height: 10.9vh;
+	background: #494949;
 }
 .fa-solid.fa-bars::before {
 	color: #A21AF0;	
