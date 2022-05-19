@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 /*Fonts Register*/
 @font-face{
 	src: url(assets/font/Ubuntu-Bold.ttf);
@@ -28,15 +35,35 @@ span,p{
 	font-size: 2rem;
 	color: #FF0072;
 }
-.navbar-nav.ms-auto li a:hover{
-   	cursor: pointer;
+.nav-link {
+  position: relative;
+  -webkit-transition: .4s all;
+  -o-transition: .4s all;
+  transition: .4s all;
 }
+.nav-link:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  background: #FF0072;
+  width: 0;
+  height: 2px;
+  -webkit-transition: .4s all;
+  -o-transition: .4s all;
+  transition: .4s all;
+}
+.nav-link:hover:before{
+	width: 90%;
+} 
 .navbar-nav.ms-auto li a i {
 	padding: 0rem 0.6rem;
 }
 /*mobil menu design*/
 .offcanvas {
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .offcanvas-header .btn-close {
@@ -76,7 +103,8 @@ span,p{
   background: #FF0072;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0.2rem 0.4rem 0.8rem #000;
+  -webkit-box-shadow: 0.2rem 0.4rem 0.8rem #000;
+          box-shadow: 0.2rem 0.4rem 0.8rem #000;
 }
 .mobil-manu-nav{
 margin-top: 6rem;
@@ -98,8 +126,10 @@ line-height: 1.9;
 }
 .bg-color-1{
 
-  background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
-	
+  background: -o-radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+
+  background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+  background: #494949;
 }
 .btn.nav-btn {
 	cursor: pointer;
@@ -135,16 +165,22 @@ line-height: 1.9;
 .headding h2{
 	font-size: 4rem;
 	margin-bottom: 3rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .banner .banner-content h1 {
 	font-size: 160px;
 	text-transform: uppercase;
 	line-height: 140px;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
 }
 .headding h2::after{
@@ -154,6 +190,8 @@ line-height: 1.9;
 	top: 62%;
 	width: 9rem;
 	height: 0.5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+  background: -o-linear-gradient(left, #A21AF0, #FF0072);
   background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 body .btn-primary{
@@ -165,8 +203,11 @@ body .btn-primary{
 	width: 15rem;
 	cursor: pointer;
 	display: inline-block;
+  background: -o-linear-gradient(75deg, #A21AF0 50%, #FF0072 50%);
   background: linear-gradient(15deg, #A21AF0 50%, #FF0072 50%);
 	font-family: Ubuntu-Bold;
+	-webkit-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 	border-color: #FF0072;
 }
@@ -174,6 +215,7 @@ body .btn-primary a{
 	letter-spacing: 0;
 }
 body .btn-primary:hover{
+  background: -o-linear-gradient(145deg, #A21AF0 50%, #FF0072 50%);
   background: linear-gradient(-55deg, #A21AF0 50%, #FF0072 50%);
 }
 body .btn-primary i{
@@ -184,40 +226,57 @@ body .btn-primary i{
 .col-lg-6.col-md-12.col-sm-12.col-12.d-flex.flex-row.align-items-center {
 	z-index: 4;
 }
-.header-banner{
-background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
-	url(assets/img/banner-image.png);
+.header-banner {
+	background: -o-radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url(assets/img/banner-image.png);
+	background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url(assets/img/banner-image.png);
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
-	background-position: center center;
+/*	background-position: fixed;*/
 	background-repeat: no-repeat;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-attachment: fixed;
+	overflow: hidden;
 }
-.header-banner .banner-content{
-	position: relative;
-	top: 20%;
+.banner-content {
+  z-index: 1;
 }
 .header-banner .banner-content h4{
-	font-size: 4rem;
-	background-clip: text !important;
+	font-size: 3.5rem;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .header-banner .banner-content h2{
-  background-clip: text !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
-	font-size: 10rem;
+	font-size: 9rem;
 	z-index: 1;
 }
 .header-banner .banner-content h3{
-   background-clip: text !important;
+   -webkit-background-clip: text !important;
+           background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
-   font-size: 4rem;
-   padding-top: 1.5rem;
-   padding-bottom: 2rem;
+   font-size: 3.5rem;
 }
 .header-banner .banner-content p{
 	font-size: 1.7rem;
@@ -241,32 +300,50 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	background: #fff;
 	border-radius: 50%;
 	overflow: hidden;
-	top: 30%;
 }
 .banner-image:before{
 	content: '';
 	position: absolute;
 	inset: -1rem 14rem;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
-	animation: animate 4s linear infinite;
+	-webkit-animation: animate 4s linear infinite;
+	        animation: animate 4s linear infinite;
 }
 .banner-image:hover::before{
 	inset: -2rem 0rem;
 }
-@keyframes animate{
+@-webkit-keyframes animate{
 	0%{
-   transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+           transform: rotate(0deg);
 	}
 	0%{
-   transform: rotate(360deg);
+   -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
+	}
+}
+@keyframes animate{
+	0%{
+   -webkit-transform: rotate(0deg);
+           transform: rotate(0deg);
+	}
+	0%{
+   -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
 	}
 }
 .banner-image:after{
 	content: '';
 	position: absolute;
 	inset: 0.6rem;
+		background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+		background: -o-linear-gradient(left, #A21AF0, #FF0072);
 		background: linear-gradient(to right, #A21AF0, #FF0072);
 	border-radius: 50%;
 	z-index: 1;
@@ -277,10 +354,19 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	border: 0.6rem solid #fff;
 	z-index: 3;
 	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .banner-image .banner-image-items img{
 	position: absolute;
@@ -288,8 +374,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	border-radius: 50%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 	pointer-events: none;
 }
@@ -324,8 +413,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 .about-section{}
 .about-section .about-content .about-items h2{
 	font-size: 3rem;
-  background-clip: text !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	padding: 2rem 0rem;
 		padding-bottom: 2.5rem;
@@ -338,7 +430,8 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	width: 40rem;
 	height: 50rem;
 	border-radius: 3rem 9rem;
-	box-shadow: 4px 11px 5px #FF0072;
+	-webkit-box-shadow: 4px 11px 5px #FF0072;
+	        box-shadow: 4px 11px 5px #FF0072;
 }
 /*about section end*/
 /*work details section start*/
@@ -347,8 +440,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 }
 .work-details-content-items  h2 {
 	font-size: 3rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	padding: 2rem 0rem;
 	padding-bottom: 2.5rem;
@@ -364,15 +460,25 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 .work-details .work-qualiry{
    width: 24rem;
 	 height: 30rem;
+	 background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	 background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	 background: linear-gradient(to right, #A21AF0, #FF0072);
 	 border-radius: 2rem 7rem;
    margin-bottom: 4rem;
    position: relative;
+   -webkit-transition: -webkit-transform 0.5s;
+   transition: -webkit-transform 0.5s;
+   -o-transition: transform 0.5s;
    transition: transform 0.5s;
+   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .work-details .work-qualiry:hover{
   
-	transform: translateY(-8%);
+	-webkit-transform: translateY(-8%);
+  
+	    -ms-transform: translateY(-8%);
+  
+	        transform: translateY(-8%);
 }
 .work-details .work-qualiry .work-items{
    position: absolute;
@@ -392,11 +498,13 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	border-radius: 50%;
 	margin: 1.5rem 0rem;
 	color: #fff;
-		box-shadow: 0 0 3rem #A21AF0;
+		-webkit-box-shadow: 0 0 3rem #A21AF0;
+		        box-shadow: 0 0 3rem #A21AF0;
 	}
 .work-details .work-qualiry .work-items h3 {
 	font-size: 2.5rem;
-	box-shadow: 0 0 5rem #A21AF0;
+	-webkit-box-shadow: 0 0 5rem #A21AF0;
+	        box-shadow: 0 0 5rem #A21AF0;
 	padding: 0.3rem 0rem;
 	margin: 0.6rem 0rem;
 }
@@ -412,8 +520,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	padding-left: 0;
 }
 .work-headding h2{
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
   color: transparent;
+  background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+  background: -o-linear-gradient(left, #A21AF0, #FF0072);
   background: linear-gradient(to right, #A21AF0, #FF0072);
   font-size: 2.5rem;
 }
@@ -442,16 +553,22 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 }
 .what-do .what-do-content .what-do-items .what-do-icon i{
 	font-size: 3.5rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 
 }
 .what-do .what-do-content .what-do-items h3 {
 	display: inline-block;
 	font-size: 3rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	margin-bottom: 0rem;
 	position: absolute;
@@ -513,40 +630,61 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
    border-color: #FF0072;	
 }
 .fa-solid.fa-code::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .fa-solid.fa-repeat::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .fa-solid.fa-thumbs-up::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .fa-solid.fa-comments::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .fa-solid.fa-calendar-plus::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .fa-solid.fa-pen::before {
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .how-do-section .how-do-content .how-do-items h4 {
 	font-size: 3rem;
 	padding-top: 2.5rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .how-do-section .how-do-content .how-do-items P{
@@ -555,11 +693,161 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	padding: 1.5rem;
 }
 /*how do section end*/
-/*portfolio section start*/
-
-/*portfolio section end*/
 /*skill section start*/
+.our-skill-section{}
+.progress-contant{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.progress-contant .progress-icons{
+	width: 7rem;
+	height: 7rem;
+	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
+	background: linear-gradient(to right, #A21AF0, #FF0072);
+	position: relative;
+}
+.progress-contant .progress-icons i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 4rem;
+	border-radius: 0.2rem;
+}
+.progress-contant .progress-text h2{
+	font-size: 2rem;
+	margin-left: 1.7rem;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
+	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
+	background: linear-gradient(to right, #A21AF0, #FF0072);
+}
+.progress-contant .progress-text{
+	position: relative;
+}
+.progress-contant .progress-text .margin-1{
+	margin-left: 2rem;
+	margin-bottom: -4rem;
+}
+.progress-contant .progress-text .margin-2{
+	position: absolute;
+	top: 71%;
+}
+.progress-icons.max-w {
+	width: 13rem;
+}
+.progress-icons.max-y {
+	width: 12rem;
+}
+.progress-text.mar {
+	margin-bottom: -4rem;
+}
+.progress-contant .progress-text p{
+	font-size: 1.7rem;
+	margin-left: 2rem;
+}
+.wrapper {
+  width: 520px;
+  max-width: 80%;
+  margin-bottom: 7rem;
+}
 
+.progress-bar {
+  height: 2.2rem;
+  width: 100%;
+  background-color: #BFADA3;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+          box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+  position: relative;
+}
+
+* + .progress-bar {
+  margin-top: 2rem;
+}
+.progress-bar {
+	background: #A21AF0 !important;
+}
+
+.bar {
+  width: 0;
+  height: 100%;
+  background-color: #FF0072;
+  
+  /*Lollipop background gradient*/
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(162,26,240,0.26) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(162,26,240,0.26) 50%,
+    rgba(162,26,240,0.26) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: linear-gradient(
+    -45deg,
+    rgba(162,26,240,0.26) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(162,26,240,0.26) 50%,
+    rgba(162,26,240,0.26) 75%,
+    transparent 75%,
+    transparent
+  );
+ 
+  background-size: 30px 30px;
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+  -webkit-box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+          box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+  -webkit-transition: width 2s ease-out;
+  -o-transition: width 2s ease-out;
+  transition: width 2s ease-out;
+}
+
+/*Lollipop background gradient animation*/
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.perc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+    font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
 /*skill section end*/
 /*team section start*/
 .team-section.gray-bg.py-5 {
@@ -582,7 +870,8 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	width: 100%;
 	height: auto;
 	border-radius: 3rem 9rem;
-	box-shadow: 4px 11px 5px #FF0072;
+	-webkit-box-shadow: 4px 11px 5px #FF0072;
+	        box-shadow: 4px 11px 5px #FF0072;
 }
 .team-section .team-member .member-profile-icon {
 	position: absolute;
@@ -598,8 +887,12 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 }
 .team-section .team-member .member-profile-icon ul li{
 	display: inline-block;
+	-webkit-transition: .4s ease-in-out;
+	-o-transition: .4s ease-in-out;
 	transition: .4s ease-in-out;
-	transform: translateY(4.5rem);
+	-webkit-transform: translateY(4.5rem);
+	    -ms-transform: translateY(4.5rem);
+	        transform: translateY(4.5rem);
 	opacity: 0;
 	visibility: hidden;
 		padding-right: 0.5rem;
@@ -607,19 +900,29 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 .team-section .team-member .team-image:hover .member-profile-icon ul li{
  visibility: visible;
  opacity: 1;
- transform: translateY(0);
+ -webkit-transform: translateY(0);
+     -ms-transform: translateY(0);
+         transform: translateY(0);
 }
 .team-section .team-member .team-image .member-profile-icon ul li:nth-child(1){
-	transition-delay: .2s;
+	-webkit-transition-delay: .2s;
+	     -o-transition-delay: .2s;
+	        transition-delay: .2s;
 }
 .team-section .team-member .team-image .member-profile-icon ul li:nth-child(2){
-	transition-delay: .3s;
+	-webkit-transition-delay: .3s;
+	     -o-transition-delay: .3s;
+	        transition-delay: .3s;
 }
 .team-section .team-member .team-image .member-profile-icon ul li:nth-child(3){
-	transition-delay: .4s;
+	-webkit-transition-delay: .4s;
+	     -o-transition-delay: .4s;
+	        transition-delay: .4s;
 }
 .team-section .team-member .team-image .member-profile-icon ul li:nth-child(4){
-	transition-delay: .5s;
+	-webkit-transition-delay: .5s;
+	     -o-transition-delay: .5s;
+	        transition-delay: .5s;
 }
 .team-section .team-member .member-profile-icon ul li a{
 	display: block;
@@ -630,6 +933,8 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	background-color: #FF0072;
 	border-radius: 50%;
 	color: #fff;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
 	transition: .5s;
 }
 .team-section .team-member .member-profile-icon ul li a:hover{
@@ -643,8 +948,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 }
 .team-section .team-member .team-content h4 {
 	font-size: 2.5rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .team-section .team-member .team-content p{
@@ -653,7 +961,9 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 /*team section end*/
 /*contact section start*/
 .contact-section{
-	background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%),
+	background: -o-radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),
+	url(assets/img/contact-banner.jpg);
+	background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%),
 	url(assets/img/contact-banner.jpg);
 	background-position: center center;
 	background-size: cover;
@@ -665,8 +975,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 }
 .contact-content .contact-headding h2 {
 	font-size: 3rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	padding: 2rem 0rem;
 	padding-bottom: 2.5rem;
@@ -686,8 +999,11 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 	font-size: 2rem;
 }
 .contact-content .contact-items span i{
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	font-size: 3rem;
 	padding-right: 2rem;
@@ -708,12 +1024,17 @@ background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
 .contact-content .contact-items .contact-discription h4{
   color: #fff;
 	font-size:3rem;
-	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	        background-clip: text !important;
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .contact-form{
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 }
 .contact-bg {
@@ -756,8 +1077,11 @@ body .btn-primary-1{
 	width: 15rem;
 	cursor: pointer;
 	display: inline-block;
+	background: -o-linear-gradient(75deg, #A21AF0 50%, #FF0072 50%);
 	background: linear-gradient(15deg, #A21AF0 50%, #FF0072 50%);
 	font-family: Ubuntu-Bold;
+	-webkit-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 	border-color: #FF0072;
 }
@@ -765,6 +1089,8 @@ body .btn-primary-1{
 /*footer section start*/
 .footer-section{
 	color: transparent;
+	background: -webkit-gradient(linear, left top, right top, from(#A21AF0), to(#FF0072));
+	background: -o-linear-gradient(left, #A21AF0, #FF0072);
 	background: linear-gradient(to right, #A21AF0, #FF0072);
 	color: #fff;
 	z-index: -1;
@@ -791,6 +1117,8 @@ body .btn-primary-1{
 .footer-section ul li a{
 	text-decoration: none;
 	font-size: 1.5rem;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 .footer-section ul li a:hover{
@@ -800,6 +1128,8 @@ body .btn-primary-1{
 /* widget-social */
 .widget-social ul{
 	list-style-type: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .widget-social ul li{
@@ -828,6 +1158,8 @@ body .btn-primary-1{
 }
 .footer-contact .footer-contact-items span i{
 	font-size: 2rem;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
 	transition: .3s;
 }
 .footer-contact .footer-contact-items span i:hover{
@@ -836,6 +1168,8 @@ body .btn-primary-1{
 .footer-contact .footer-contact-items a{
 	text-decoration: none;
 	font-size: 1.6rem;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
 	transition: .3s;
 }
 .footer-contact .footer-contact-items a:hover{
@@ -851,6 +1185,8 @@ body .btn-primary-1{
 	font-size: 1.6rem;
 	text-decoration: none;
 	cursor: pointer;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
 	transition: .3s;
 }
 .footer-copyright p a:hover{
