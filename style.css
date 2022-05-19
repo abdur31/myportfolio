@@ -245,7 +245,6 @@ body .btn-primary i{
 	    -ms-flex-align: center;
 	        align-items: center;
 	background-attachment: fixed;
-	overflow: hidden;
 }
 .banner-content {
   z-index: 1;
