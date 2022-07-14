@@ -21,9 +21,7 @@ $( document ).ready(function() {
             }
         }
     });
-});
 
-$( document ).ready(function() {
     $('#brand-item-2').owlCarousel({
         loop:true,
         margin:50,

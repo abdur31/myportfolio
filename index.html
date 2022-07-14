@@ -16,29 +16,21 @@
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="assets/css/owl.carousel.css">
 	<link rel="stylesheet" href="assets/css/owl.theme.green.css">
+	<!-- animated headline -->
+	<link rel="stylesheet" href="assets/css/animatedheadline.css">
+	<link rel="stylesheet" href="assets/css/jquery.animatedheadline.css">
 </head>
 <body> 
 <!-- HEADER NAV SECTION START -->
-<a class="btn nav-btn" data-bs-toggle="offcanvas" href="#offcanvas-button-1" role="button" aria-controls="offcanvas-button-1">
-	<i class="fa-solid fa-bars"></i>
-</a>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-button-1" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-  <img src="assets/img/man-1.jpg" alt="man-1.jpg" class="text-center">
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="mobil-menu">
-      <h2 id="offcanvasExampleLabel">ABDUR RAHMAN</h2> 
-      <div class="mobil-icon">
-      	<i class="fa-brands fa-facebook"></i>
-      	<i class="fa-brands fa-twitter"></i>
-      	<i class="fa-brands fa-instagram"></i>
-      	<i class="fa-brands fa-linkedin"></i>
-      </div>   
-    </div>
-    <div class="mobil-manu-nav">
-       <ul class="navbar-nav">
+<header id="tsparticles">
+<nav class="navbar navbar-expand-lg bg-color-header fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt="logo.svg"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="#Home"><i class="fa-solid fa-house"></i>Home</a>
         </li>
@@ -58,49 +50,30 @@
           <a class="nav-link" href="#Contact"><i class="fa-solid fa-address-card"></i>Contact</a>
         </li>
       </ul>
-    </div>
-  </div>
-</div>
-<header>
-<nav class="navbar navbar-expand-lg bg-color-1">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt="logo.svg">
-    </a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#Home"><i class="fa-solid fa-house"></i>Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#About"><i class="fa-solid fa-user"></i>About</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#Resume"><i class="fa-solid fa-file"></i>Resume</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#Services"><i class="fa-solid fa-server"></i>Services</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#Portfolio"><i class="fa-solid fa-hands-asl-interpreting"></i>Portfolio</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#Contact"><i class="fa-solid fa-address-card"></i>Contact</a>
-        </li>
-      </ul>
-    </div>
+      </div>
   </div>
 </nav>
 </header>
 <!-- HEADER NAV SECTION END -->
 <!-- HEADER BANNER SECTION START -->
-<section class="header-banner" id="particles-js">
+<section class="header-banner" id="hero-area">
 	<div class="container">
 		<div class="row">
 		 <div class="col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-center">
 		 	<div class="banner-content">
 		 	<h4>Hello,</h4>
 		 	<h2>I'm Abdur Rahman</h2>
-		 	<h3>Professional Web Designer</h3>
+		 	<div class="cd-intro">
+                <h1 class="cd-headline clip">
+                <span class="cd-words-wrapper">
+                    <b class="is-visible">I Am A Freelancer</b>
+                    <b>Web Designer</b>
+                    <b>Front End Developer</b>
+                    <b>Web Developer</b>
+                    <b>Wordpress Expert</b>
+                </span>
+            </h1>
+            </div>
 		 	<p>I am a passionate web developer who wants to learn more and more about web-based technology. I want to touch the highest peak of web development and provide value to the organization I work.</p>
 		 	 <a href="#" class=" btn btn-lg btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i>Resume</a>	
 		 	   <a href="#" class=" btn btn-lg btn-primary"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
@@ -920,12 +893,12 @@
   </div>
 <!-- FOOTER SECTION END -->
 	<!-- bootstrap js link -->
-	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/particles.min.js"></script>
-	<script src="assets/js/app.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
 	<script src="assets/js/mixitup.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/animatedheadline.main.js"></script>
+	<script src="assets/js/jquery.animatedheadline.min.js"></script>
 </body>
 </html>

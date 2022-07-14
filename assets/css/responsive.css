@@ -116,6 +116,9 @@
 }
 }
 @media only screen and (max-width: 768px){
+.cd-intro h1 {
+	font-size: 4rem;
+}
 .owl-carousel.owl-drag .owl-item {
 	display: flex;
 	justify-content: center;
@@ -164,6 +167,9 @@
 /*header banner section*/
 	.header-banner .banner-content h2 {
 	font-size: 4rem;
+}
+.cd-intro h1 {
+	font-size: 3rem;
 }
 .header-banner .banner-content h4{
 	font-size: 2rem;
